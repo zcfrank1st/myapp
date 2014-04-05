@@ -8,7 +8,8 @@
             [taoensso.timbre.appenders.rotor :as rotor]
             [selmer.parser :as parser]
             [environ.core :refer [env]]
-            [myapp.views.myapp :as myapp]))
+            [myapp.views.myapp :as myapp]
+            [myapp.views.ace :as ace]))
 
 (defroutes app-routes
   (route/resources "/")
