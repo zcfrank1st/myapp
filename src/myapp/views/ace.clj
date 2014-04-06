@@ -12,13 +12,22 @@
                  "/css/font-awesome.min.css"
                  "/css/ace.min.css"
                  "/css/ace-rtl.min.css"
-                 "/css/ace-skins.min.css")
-    (include-js  "/js/ace-extra.min.js"
-                 "http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"
+                 "/css/ace-skins.min.css"
+                 "/css/bootstrap-responsive.css"
+                 "/css/tablecloth.css"
+                 "/css/prettify.css")
+
+    (include-js  "http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"
                  "/js/bootstrap.min.js"
+                 "/js/jquery.metadata.js"
+                 "/js/jquery.tablesorter.min.js"
+                 "/js/jquery.tablecloth.js"
                  "/js/typeahead-bs2.min.js"
+                 "/js/ace-extra.min.js"
                  "/js/ace-elements.min.js"
-                 "/js/ace.min.js")]
+                 "/js/ace.min.js"
+
+                 "/my.js")]
    [:body
     [:div.navbar.navbar-default {:id "navbar"}
      [:div.navbar-container {:id "navbar-container"}
@@ -36,7 +45,7 @@
           [:i.icon-caret-down]]
          [:ul.user-menu.pull-right.dropdown-menu.dropdown-yellow.dropdown-caret.dropdown-close
           [:li
-           [:a {:href "#"}
+           [:a {:href "http://localhost:3000"}
             [:i.icon-off]
             "注销"]]]]]]]]
 
@@ -46,7 +55,9 @@
        [:li.active
         [:a {:href "#"}
          [:i.icon-dashboard]
-         [:span.menu-text "面试记录"]]]]]]
+         [:span.menu-text "面试记录"]]]]
+      [:div.sidebar-collapse {:id "sidebar-collapse"}
+       [:i.icon-double-angle-left {:data-icon1 "icon-double-angle-left" :data-icon2 "icon-double-angle-right"}]]]]
 
      [:div.main-content
       [:div.page-content
@@ -58,4 +69,25 @@
        [:div.row
         [:div.col-xs-12
          ;;具体表格实现
-         ]]]]]))
+         [:table
+          [:thead
+           [:tr
+            [:th ""]
+            [:th "姓名"]
+            [:th "年龄"]
+            [:th "性别"]
+            [:th "学历"]
+            [:th "曾工作公司及时间"]
+            [:th "面试时间"]
+            [:th "面试问题"]
+            [:th "状态"]]]
+          [:tbody
+           ]]]]
+       [:div.row
+        [:div.col-xs-1
+         [:button.btn.btn-info.btn-xs {:id "add"}
+          [:i.icon-asterisk]
+          "增加"]]
+        [:div.col-xs-1
+         [:button.btn.btn-info.btn-xs {:id "edit"}
+          [:i.icon-pencil]"修改"]]]]]]))
