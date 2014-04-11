@@ -22,7 +22,8 @@
    [compojure "1.1.6"]
    [hiccup "1.0.5"]
    [com.taoensso/carmine "2.6.0"]
-   [liberator "0.11.0"]]
+   [liberator "0.11.0"]
+   [org.clojure/data.json "0.2.4"]]
   :ring
   {:handler myapp.handler/app,
    :init myapp.handler/init,

@@ -1,4 +1,4 @@
-## DP Interview
+## DP Data Monitor
 * Description
 * Composition
 * Demo
@@ -10,7 +10,7 @@ The project is mainly developed through `clojure` which is a dialect of `Lisp`. 
 <br>
 The UI of the project is `ace`.
 ### Demo
-[DP Interview](http://localhost:3000/demo)
+[DP Data Monitor](http://localhost:3000/demo)
 
 
 

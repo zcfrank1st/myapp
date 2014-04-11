@@ -12,11 +12,9 @@ $(document).ready(function () {
 
 
     for (var state in china) {
-    china[state]['path'].color = Raphael.getColor(0.9);
-
+        //china[state]['path'].color = Raphael.getColor(0.9);
         (function (st, state) {
-
-          //获取当前图形的中心坐标
+            //获取当前图形的中心坐标
             var xx = st.getBBox().x + (st.getBBox().width / 2);
             var yy = st.getBBox().y + (st.getBBox().height / 2);
 
@@ -61,22 +59,62 @@ $(document).ready(function () {
                     break;
                 default:
             }
-      //写入文字
-      china[state]['text'] = R.text(xx, yy, china[state]['name']).attr(textAttr);
-
-      st[0].onmouseover = function () {
-                st.animate({fill: st.color, stroke: "#eee"}, 500);
-        china[state]['text'].toFront();
-                R.safari();
-            };
-            st[0].onmouseout = function () {
-                st.animate({fill: "#97d6f5", stroke: "#eee"}, 500);
-
-                R.safari();
-            };
-
-         })(china[state]['path'], state);
+            //写入文字
+            china[state]['text'] = R.text(xx, yy, china[state]['name']).attr(textAttr);
+        })(china[state]['path'], state);
     }
 
+    var requestDataAndRefresh = function () {
+        $.ajax({
+            url: '/jsondata',
+            type: 'GET',
+            async: false
+        })
+            .done(function (data) {
+                //获取json串
+                var contents = JSON.parse(data);
 
+                for (var state in china) {
+                    for (var i = 0; i < contents.length; i++) {
+                        if (contents[i].place == state) {
+                            if (contents[i].total > 999) {
+                                //绿色
+                                china[state]['path'].animate({fill: "#00ff00", stroke: "#eee"}, 2000);
+                            } else if (contents[i].total > 500 && contents[i].total <= 999) {
+                                //蓝色
+                                china[state]['path'].animate({fill: Raphael.color("blue"), stroke: "#eee"}, 2000);
+                            } else if (contents[i].total <= 500 && contents[i].total > 100) {
+                                // 橘黄色
+                                china[state]['path'].animate({fill: Raphael.color("orange"), stroke: "#eee"}, 2000);
+                            } else {
+                                // 红色
+                                china[state]['path'].animate({fill: Raphael.color("red"), stroke: "#eee"}, 2000);
+                            }
+                        }
+                    }
+                }
+            })
+            .fail(function () {
+
+            });
+
+        //st.animate({fill: st.color, stroke: "#eee"}, 1000, b);
+//            }
+
+
+    }
+
+    var cleanMap = function(){
+        for (var state in china) {
+            china[state]['path'].animate({fill: "#97d6f5", stroke: "#eee"}, 1000);
+        }
+    }
+
+    var total = function(){
+        requestDataAndRefresh();
+        cleanMap();
+    }
+
+    total();
+    setInterval(total, 3000);
 });
