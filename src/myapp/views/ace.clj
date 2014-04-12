@@ -14,6 +14,7 @@
                   "/css/ace.min.css"
                   "/css/ace-rtl.min.css"
                   "/css/ace-skins.min.css"
+                  "/my.css"
                   )
 
      (include-js "http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"
