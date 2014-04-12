@@ -1,6 +1,21 @@
 $(document).ready(function () {
     // 地图展现
     var R = Raphael("map", 600, 500);
+
+    var tag1 = R.rect(2, 2, 10, 10);
+    R.text(60, 7, "PV>1000");
+    var tag2 = R.rect(2, 17, 10, 10);
+    R.text(60, 22, "500<=PV<100");
+    var tag3 = R.rect(2, 32, 10, 10);
+    R.text(60, 37, "100<=PV<500");
+    var tag4 = R.rect(2, 47, 10, 10);
+    R.text(60, 52, "PV<100");
+
+    tag1.attr({fill: "green"});
+    tag2.attr({fill: "blue"});
+    tag3.attr({fill: "orange"});
+    tag4.attr({fill: "red", text: "PV数小于100"});
+
     //调用绘制地图方法
     paintMap(R);
 
@@ -78,7 +93,7 @@ $(document).ready(function () {
                         if (contents[i].place == state) {
                             if (contents[i].total > 999) {
                                 //绿色
-                                china[state]['path'].animate({fill: "#00ff00", stroke: "#eee"}, 2000);
+                                china[state]['path'].animate({fill: Raphael.color("green"), stroke: "#eee"}, 2000);
                             } else if (contents[i].total > 500 && contents[i].total <= 999) {
                                 //蓝色
                                 china[state]['path'].animate({fill: Raphael.color("blue"), stroke: "#eee"}, 2000);
@@ -112,5 +127,5 @@ $(document).ready(function () {
     }
 
     total();
-    setInterval(total, 5000);
+    setInterval(total, 4000);
 });

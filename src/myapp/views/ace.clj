@@ -70,6 +70,8 @@
           [:small
            [:i.icon-double-angle-right]
            " 点评网全国PV数据监控"]]]
+        [:br]
+        [:br]
+        [:br]
         [:div.row
-         [:div]
-          [:div#map {:class "center"}]]]]]]]))
+         [:div#map {:class "center"}]]]]]]]))
