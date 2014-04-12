@@ -12,7 +12,6 @@ $(document).ready(function () {
 
 
     for (var state in china) {
-        //china[state]['path'].color = Raphael.getColor(0.9);
         (function (st, state) {
             //获取当前图形的中心坐标
             var xx = st.getBBox().x + (st.getBBox().width / 2);
@@ -98,23 +97,20 @@ $(document).ready(function () {
 
             });
 
-        //st.animate({fill: st.color, stroke: "#eee"}, 1000, b);
-//            }
-
 
     }
 
-    var cleanMap = function(){
+    var cleanMap = function () {
         for (var state in china) {
             china[state]['path'].animate({fill: "#97d6f5", stroke: "#eee"}, 1000);
         }
     }
 
-    var total = function(){
+    var total = function () {
         requestDataAndRefresh();
         cleanMap();
     }
 
     total();
-    setInterval(total, 3000);
+    setInterval(total, 5000);
 });
