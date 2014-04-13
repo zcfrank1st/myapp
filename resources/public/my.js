@@ -3,13 +3,13 @@ $(document).ready(function () {
     var R = Raphael("map", 600, 500);
 
     var tag1 = R.rect(2, 2, 10, 10);
-    R.text(60, 7, "PV>1000");
+    R.text(60, 7, "PV > 1000");
     var tag2 = R.rect(2, 17, 10, 10);
-    R.text(60, 22, "500<=PV<100");
+    R.text(60, 22, "500 ≤ PV < 100");
     var tag3 = R.rect(2, 32, 10, 10);
-    R.text(60, 37, "100<=PV<500");
+    R.text(60, 37, "100 ≤ PV < 500");
     var tag4 = R.rect(2, 47, 10, 10);
-    R.text(60, 52, "PV<100");
+    R.text(60, 52, "PV < 100");
 
     tag1.attr({fill: "green"});
     tag2.attr({fill: "blue"});

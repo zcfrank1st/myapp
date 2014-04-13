@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a0f280af-2dd0-4eae-a737-25dd2de41fa0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/public/my.js" afterPath="$PROJECT_DIR$/resources/public/my.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="myapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,8 +68,8 @@
       <file leaf-file-name="my.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/public/my.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7777778" vertical-offset="1995" max-vertical-offset="2679">
-              <caret line="133" column="24" selection-start-line="133" selection-start-column="24" selection-end-line="133" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.30555555" vertical-offset="0" max-vertical-offset="2679">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -208,6 +207,10 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="org.twodividedbyzero.idea.findbugs" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -474,12 +477,12 @@
       <workItem from="1397288503693" duration="4378000" />
       <workItem from="1397293228657" duration="7946000" />
       <workItem from="1397323759355" duration="224000" />
-      <workItem from="1397379555032" duration="611000" />
+      <workItem from="1397379555032" duration="861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26533000" />
+    <option name="totallyTimeSpent" value="26783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="807" extended-state="6" />
@@ -646,8 +649,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/public/my.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7777778" vertical-offset="1995" max-vertical-offset="2679">
-          <caret line="133" column="24" selection-start-line="133" selection-start-column="24" selection-end-line="133" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.30555555" vertical-offset="0" max-vertical-offset="2679">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>
