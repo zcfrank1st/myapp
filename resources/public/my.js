@@ -93,15 +93,19 @@ $(document).ready(function () {
                         if (contents[i].place == state) {
                             if (contents[i].total > 999) {
                                 //绿色
+                                china[state]['path'].attr({title: "PV总量: " + contents[i].total});
                                 china[state]['path'].animate({fill: Raphael.color("green"), stroke: "#eee"}, 2000);
                             } else if (contents[i].total > 500 && contents[i].total <= 999) {
                                 //蓝色
+                                china[state]['path'].attr({title: "PV总量: " + contents[i].total});
                                 china[state]['path'].animate({fill: Raphael.color("blue"), stroke: "#eee"}, 2000);
                             } else if (contents[i].total <= 500 && contents[i].total > 100) {
                                 // 橘黄色
+                                china[state]['path'].attr({title: "PV总量: " + contents[i].total});
                                 china[state]['path'].animate({fill: Raphael.color("orange"), stroke: "#eee"}, 2000);
                             } else {
                                 // 红色
+                                china[state]['path'].attr({title: "PV总量: " + contents[i].total});
                                 china[state]['path'].animate({fill: Raphael.color("red"), stroke: "#eee"}, 2000);
                             }
                         }
@@ -127,5 +131,5 @@ $(document).ready(function () {
     }
 
     total();
-    setInterval(total, 4000);
+    setInterval(total, 5000);
 });
